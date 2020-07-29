@@ -4,22 +4,12 @@
 #Programa editado por André F.C. Melo
 #handremelo@gmail.com
 
+
 import socket
 
-errorList = {}
-
-with open('error_list.txt', 'r') as file:
-    linhas = file.readlines()
-    for linha in linhas:
-        linha_dividida = linha.split(' = ')
-        try:
-            errorList[linha_dividida[0]] = linha_dividida[1][0:-2]
-        except:
-            print("")
 
 ip = input("Digite o host ou ip a ser verificado : ")
 ports = []
-
 while True:
     
     try:
@@ -42,10 +32,6 @@ for port in ports:
     
     if code == 0:
         print("Porta {} Aberta".format(port))
-    else:
-        print("Porta {} fechada".format(port))
-    
-    if code in errorList:
-        print("E retornou o código {errorList[str(code)]}".format(port = port, code=errorList[str(code)]))
-    else:
-        print("E retornou o código {code}".format(port = port, code=code))
+        continue
+    print("Porta {} fechada".format(port))
+    print("Com o código {} retornado".format(code))
