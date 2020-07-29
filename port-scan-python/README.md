@@ -21,6 +21,7 @@ A modificação maior que fiz foi implementar uma GUI, estilo apps de desktop, c
 Para iniciar, basta ir ao terminal e rodar, também. Então essa GUI irá abrir e poderão ser digitados Ip/Hostname e o range de portas, ex. 1-1024.
 Em seguida basta clicar no botão "Scan" que ele fará uma chamada ao script pscan_nmap_v2.py, por isso é importante tê-lo na mesma pasta.
 O resultado será mostrado na GUI.
+OBS: Enquanto o scanner estiver rodando, é possível que o GUI fique travado, mas é normal, com o resultado pronto ele retorna a operação.
 
 <img src="https://i.imgur.com/J4n1wFB.png" title="source: imgur.com" /></a>
 
