@@ -26,6 +26,7 @@ def showResults(results,labelObj):
     labelObj['Status do IP :']['text'] = 'Status do IP :'+str(results['status'])
     labelObj['Protocolos :']['text'] = 'Protocolos :'+str(results['protocols'])
     labelObj['Portas Abertas :']['text'] = 'Portas Abertas :'+str(results['doors'])
+    labelObj['Status da Solicitação :']['text'] = labelObj['Status da Solicitação :']['text']+' Sucesso'
 
 def fetch(entradas,labelObj):
     opcao = option.get()
@@ -72,7 +73,7 @@ if __name__ == '__main__':
     option = tk.StringVar()
     res,ents = makeform(root, fields)
     root.bind('<Return>', (lambda event, e=ents: fetch(e,res)))   
-    b1 = tk.Button(root, text='Show', command=(lambda e=ents: fetch(e,res)))
+    b1 = tk.Button(root, text='Scan', command=(lambda e=ents: fetch(e,res)))
     b1.pack(side=tk.LEFT, padx=5, pady=5)
     b2 = tk.Button(root, text='Quit', command=root.quit)
     b2.pack(side=tk.LEFT, padx=5, pady=5)
