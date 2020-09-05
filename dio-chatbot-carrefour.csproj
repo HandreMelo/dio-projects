@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>dio_chatbot_carrefour</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Telegram.Bot" Version="15.7.1" />
+    <PackageReference Include="Telegram.Bot.Extensions.Polling" Version="0.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.6" />
+  </ItemGroup>
+
+</Project>
